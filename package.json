@@ -1,0 +1,39 @@
+{
+  "name": "js-algorithms-project-lvl1",
+  "version": "1.0.0",
+  "description": "learning search algorithms",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "npx jest --bail"
+  },
+  "simple-git-hooks": {
+    "pre-push": "make lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ikijime/js-algorithms-project-lvl1.git"
+  },
+  "author": "Alexei Utkin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ikijime/js-algorithms-project-lvl1/issues"
+  },
+  "homepage": "https://github.com/ikijime/js-algorithms-project-lvl1#readme",
+  "dependencies": {
+    "debug": "^4.3.3",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@jest/globals": "^27.5.1",
+    "eslint": "^8.10.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jest": "^26.1.1",
+    "jest": "^27.5.1",
+    "jest-cli": "^27.5.1",
+    "npm-check-updates": "^12.5.2",
+    "prettier": "^2.6.2",
+    "simple-git-hooks": "^2.7.0"
+  }
+}
