@@ -1,11 +1,11 @@
 {
-  "name": "js-algorithms-project-lvl1",
+  "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "learning search algorithms",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "npx jest --bail"
+    "test": "npx jest"
   },
   "simple-git-hooks": {
     "pre-push": "make lint"
