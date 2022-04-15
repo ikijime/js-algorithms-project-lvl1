@@ -5,8 +5,16 @@ function buildSearchEngine(data) {
     },
 
     search(searchPhrase) {
-      const filteredWords = data.filter((item) => item.text.split(' ').includes(searchPhrase));
-      return filteredWords.map((item) => item.id);
+      const token = String(searchPhrase.match(/\w+/g));
+
+      const withoutPunctuation = data.map((item) => {
+        const result = item.text.match(/\w+/g);
+        return { id: item.id, text: result };
+      });
+
+      const matchedStrings = withoutPunctuation.filter((item) => item.text.includes(token));
+
+      return matchedStrings.map((item) => item.id);
     },
   };
 }

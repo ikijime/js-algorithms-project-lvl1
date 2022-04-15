@@ -1,3 +1,4 @@
+import { expect } from '@jest/globals';
 import buildSearchEngine from '../src/index.js';
 
 // создание документа
@@ -8,6 +9,11 @@ const doc3 = { id: 'doc3', text: "I'm your shooter." };
 const docs = [doc1, doc2, doc3];
 const searchEngine = buildSearchEngine(docs); // поисковый движок запомнил документы
 
-test('buildSearchEngine', () => {
+test('search_single_word', () => {
   expect(searchEngine.search('shoot')).toEqual(['doc1', 'doc2']);
+});
+
+test('search_word_with_punctuation', () => {
+  expect(searchEngine.search('pint')).toEqual(['doc1']);
+  expect(searchEngine.search('pint!')).toEqual(['doc1']);
 });
