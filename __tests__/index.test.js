@@ -1,4 +1,4 @@
-import { expect } from '@jest/globals';
+import { expect, test } from '@jest/globals';
 import buildSearchEngine from '../src/index.js';
 
 // создание документа
@@ -16,4 +16,8 @@ test('search_word_with_punctuation', () => {
 
 test('result_in_relevant_order', () => {
   expect(searchEngine.search('shoot')).toEqual(['doc2', 'doc1']);
+});
+
+test('fuzzy_search', () => {
+  expect(searchEngine.search('shoot at me')).toEqual(['doc2', 'doc1']);
 });
